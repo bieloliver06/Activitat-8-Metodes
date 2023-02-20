@@ -31,10 +31,21 @@
         static int Multiplicador(int a, int b)
         {
             int resultat = 1;
-            for (int i = a; i <= b; i++)
+            if (a < b)
             {
-                resultat = resultat * i;
+                for (int i = a; i <= b; i++)
+                {
+                    resultat = resultat * i;
+                }
             }
+            else
+            {
+                for (int i = b; i <= a; i++)
+                {
+                    resultat = resultat * i;
+                }
+            }
+            
             return resultat;
         } 
     }
